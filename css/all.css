@@ -165,7 +165,7 @@ main {
 
 .activity {
   color: #FFF;
-  background: url("/images/web-2-bg.webp") no-repeat center/cover;
+  background: url("images/web-2-bg.webp") no-repeat center/cover;
   padding: 100px 0;
 }
 @media screen and (max-width: 1024px) {
@@ -189,7 +189,7 @@ main {
   z-index: 10;
   width: 369px;
   height: 369px;
-  background: url("/images/treasure box.webp") no-repeat center/cover;
+  background: url("images/treasure box.webp") no-repeat center/cover;
 }
 @media screen and (max-width: 1024px) {
   .activity .container {
@@ -324,7 +324,7 @@ main {
   right: -3%;
   width: 25px;
   height: 33px;
-  background: url("/images/eva_arrow-up-fill.svg") no-repeat center/cover;
+  background: url("images/eva_arrow-up-fill.svg") no-repeat center/cover;
 }
 .activity .container .section .gamesGroup-mob .swiper-button-prev:after,
 .activity .container .section .gamesGroup-mob .swiper-button-next:after {
