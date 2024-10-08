@@ -70,7 +70,7 @@ window.addEventListener('load', function () {
       gamesLinks: [
         'https://www.kuyaplay17.com',
         'https://www.kuyaplay18.com',
-        'https://www.kuyaplayvip.com',
+        'https://www.kuyalab.ws/',
       ],
     },
   ];
@@ -86,5 +86,4 @@ window.addEventListener('load', function () {
       });
     });
   });
-  
 });
