@@ -165,7 +165,7 @@ main {
 
 .activity {
   color: #FFF;
-  background: url("images/web-2-bg.webp") no-repeat center/cover;
+  background: url("../images/web-2-bg.webp") no-repeat center/cover;
   padding: 100px 0;
 }
 @media screen and (max-width: 1024px) {
