@@ -1,0 +1,745 @@
+/*css reset*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*---start---*/
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+main {
+  overflow-x: hidden;
+  font-family: Inter;
+  font-size: 24px;
+}
+
+.banner {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.banner img {
+  width: 100%;
+}
+.banner-mob {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .banner-mob {
+    display: block;
+  }
+  .banner-pc {
+    display: none;
+  }
+}
+
+.activity {
+  color: #FFF;
+  background: url("/images/web-2-bg.webp") no-repeat center/cover;
+  padding: 100px 0;
+}
+@media screen and (max-width: 1024px) {
+  .activity {
+    padding: 40px 0;
+  }
+}
+.activity .container {
+  position: relative;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 80px 8%;
+  width: 80%;
+  margin: 0 auto;
+}
+.activity .container::before {
+  content: "";
+  position: absolute;
+  left: 87%;
+  top: 76%;
+  z-index: 10;
+  width: 369px;
+  height: 369px;
+  background: url("/images/treasure box.webp") no-repeat center/cover;
+}
+@media screen and (max-width: 1024px) {
+  .activity .container {
+    padding: 40px 3%;
+  }
+  .activity .container::before {
+    display: none;
+  }
+}
+.activity .container .section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.activity .container .section:nth-child(1) {
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 767px) {
+  .activity .container .section:nth-child(1) {
+    margin-bottom: 32px;
+  }
+  .activity .container .section p {
+    font-size: 18px;
+  }
+}
+.activity .container .section .section-title {
+  margin-bottom: 16px;
+}
+.activity .container .section .section-title img {
+  width: 100%;
+}
+.activity .container .section .section-title.special-event {
+  max-width: 800px;
+}
+.activity .container .section h2 {
+  color: #F19021;
+  text-align: center;
+  font-size: 48px;
+  font-weight: 700;
+  margin: 5px 0 16px;
+}
+@media screen and (max-width: 1024px) {
+  .activity .container .section h2 {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .activity .container .section h2 {
+    font-size: 24px;
+  }
+}
+.activity .container .section p {
+  line-height: 1.2;
+  text-align: center;
+}
+.activity .container .section .luckLogoGroup {
+  margin: 50px auto 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 1000px;
+}
+@media screen and (max-width: 767px) {
+  .activity .container .section .luckLogoGroup {
+    margin: 16px auto 0px;
+  }
+}
+.activity .container .section .luckLogoGroup .luckLogo {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.activity .container .section .luckLogoGroup .luckLogo img {
+  width: 100%;
+  -webkit-filter: drop-shadow(0px 0px 20px rgba(255, 214, 0, 0.3));
+          filter: drop-shadow(0px 0px 20px rgba(255, 214, 0, 0.3));
+}
+.activity .container .section .luckLogoGroup .luckLogo img:hover {
+  -webkit-filter: drop-shadow(0px 0px 20px rgba(255, 214, 0, 0.8));
+          filter: drop-shadow(0px 0px 20px rgba(255, 214, 0, 0.8));
+}
+.activity .container .section .gamesGroup {
+  max-width: 1000px;
+  width: 100%;
+}
+.activity .container .section .gamesGroup-pc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media screen and (max-width: 767px) {
+  .activity .container .section .gamesGroup-pc {
+    display: none;
+  }
+}
+.activity .container .section .gamesGroup-mob {
+  display: none;
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  .activity .container .section .gamesGroup-mob {
+    display: block;
+  }
+}
+.activity .container .section .gamesGroup-mob .swiper-button-prev,
+.activity .container .section .gamesGroup-mob .swiper-button-next {
+  position: absolute;
+  top: 50%;
+  right: -3%;
+  width: 25px;
+  height: 33px;
+  background: url("/images/eva_arrow-up-fill.svg") no-repeat center/cover;
+}
+.activity .container .section .gamesGroup-mob .swiper-button-prev:after,
+.activity .container .section .gamesGroup-mob .swiper-button-next:after {
+  display: none;
+}
+.activity .container .section .gamesGroup-mob .swiper-button-prev {
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+  right: auto;
+  left: -3%;
+}
+.activity .container .section .gamesGroup .game {
+  width: 30%;
+}
+@media screen and (max-width: 767px) {
+  .activity .container .section .gamesGroup .game {
+    width: calc(100% - 50px);
+    margin: 0 auto;
+  }
+}
+.activity .container .section .gamesGroup .game-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.activity .container .section .gamesGroup .game-logo img {
+  width: 72%;
+}
+.activity .container .section .gamesGroup .game-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bonus {
+  background-color: #590802;
+  padding: 50px 0;
+}
+@media screen and (max-width: 767px) {
+  .bonus {
+    padding: 40px 0 30px;
+  }
+}
+.bonus-container {
+  width: 80%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.bonus-title-pc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  max-width: 1274px;
+}
+.bonus-title-pc img {
+  width: 100%;
+}
+@media screen and (max-width: 1024px) {
+  .bonus-title-pc {
+    display: none;
+  }
+}
+.bonus-title-mob {
+  display: none;
+}
+.bonus-title-mob img {
+  width: 100%;
+}
+@media screen and (max-width: 1024px) {
+  .bonus-title-mob {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+.bonus h2 {
+  color: #F19021;
+  text-align: center;
+  font-size: 48px;
+  font-weight: 700;
+  margin: 16px 0 40px;
+}
+@media screen and (max-width: 1024px) {
+  .bonus h2 {
+    font-size: 32px;
+    margin: 0px 0 32px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .bonus h2 {
+    font-size: 24px;
+  }
+}
+.bonus-games {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 30px;
+}
+@media screen and (max-width: 767px) {
+  .bonus-games {
+    gap: 6px;
+  }
+}
+.bonus-games .game-box {
+  width: calc(16.6666666667% - 32px);
+  min-width: 190px;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media screen and (max-width: 1024px) {
+  .bonus-games .game-box {
+    width: calc(33.3333333333% - 32px);
+    min-width: auto;
+    border-radius: 15px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .bonus-games .game-box {
+    padding: 8px;
+    width: calc(33.3333333333% - 6px);
+    margin-bottom: 10px;
+  }
+}
+.bonus-games .game-box .game-box-logo {
+  width: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.bonus-games .game-box .game-box-logo img {
+  width: 100%;
+}
+.bonus-games .game-box .game-box-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border-radius: 15px;
+  background: #F90;
+  color: #FFF;
+  text-decoration: none;
+  text-align: center;
+  font-size: 32px;
+  line-height: 1.25;
+  font-weight: 700;
+  cursor: pointer;
+}
+@media screen and (max-width: 767px) {
+  .bonus-games .game-box .game-box-btn {
+    border-radius: 10px;
+    line-height: 1;
+    font-size: 18px;
+  }
+}
+.bonus-games .game-box .game-box-btn:hover {
+  background-color: rgb(255, 98, 0);
+}
+
+.providers {
+  background: #1C0E07;
+  padding: 50px 0;
+}
+.providers h2 {
+  width: 100%;
+  max-width: 1274px;
+  margin: 0 auto 40px;
+  font-size: 48px;
+  color: #FFF;
+  font-weight: 700;
+  text-align: center;
+}
+@media screen and (max-width: 1024px) {
+  .providers h2 {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .providers h2 {
+    font-size: 28px;
+    margin: 0 auto 16px;
+  }
+}
+.providers-logos {
+  width: 100%;
+  max-width: 1274px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+@media screen and (max-width: 1024px) {
+  .providers-logos {
+    padding: 0 16px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .providers-logos {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 85%;
+    gap: 20px;
+  }
+}
+.providers-logos .providers-logo {
+  width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media screen and (max-width: 1024px) {
+  .providers-logos .providers-logo {
+    width: 150px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .providers-logos .providers-logo {
+    width: 100px;
+  }
+}
+.providers-logos .providers-logo img {
+  width: 100%;
+}
+
+/*---dropDownBtn---*/
+.dropDownBtn-toggle {
+  z-index: 2;
+  display: inline-block;
+  background-color: #F90;
+  padding: 10px;
+  border-radius: 15px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-animation: pulseBtn 2s ease-in-out infinite;
+          animation: pulseBtn 2s ease-in-out infinite;
+}
+@media screen and (max-width: 1024px) {
+  .dropDownBtn-toggle {
+    font-size: 18px;
+    line-height: 1;
+    white-space: nowrap;
+  }
+}
+
+@-webkit-keyframes pulseBtn {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes pulseBtn {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.dropDownBtn-toggle:hover {
+  background-color: rgb(255, 98, 0);
+}
+
+.dropDownBtn {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dropDownBtn-list {
+  position: absolute;
+  z-index: 1;
+  top: 99%;
+  width: 78%;
+  background-color: rgba(0, 0, 0, 0.5);
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.3s ease-out;
+  transition: max-height 0.3s ease-out;
+}
+@media screen and (max-width: 767px) {
+  .dropDownBtn-list {
+    position: relative;
+  }
+}
+
+.dropDownBtn.show .dropDownBtn-list {
+  max-height: -webkit-fit-content;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+}
+
+.dropDownBtn-link {
+  display: block;
+  padding: 8px 10px;
+  line-height: 30px;
+  font-size: 24px;
+  font-weight: 700;
+  border-bottom: 1px solid #FFF;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
+@media screen and (max-width: 1024px) {
+  .dropDownBtn-link {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .dropDownBtn-link {
+    line-height: 1;
+  }
+}
+
+.dropDownBtn-link:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}

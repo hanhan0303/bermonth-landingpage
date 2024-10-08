@@ -1,0 +1,650 @@
+/*css reset*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*---start---*/
+* {
+  box-sizing: border-box;
+}
+
+main {
+  overflow-x: hidden;
+  font-family: Inter;
+  font-size: 24px;
+}
+
+.banner {
+  width: 100%;
+  display: flex;
+
+  img {
+    width: 100%;
+  }
+
+  &-mob {
+    display: none;
+  }
+
+  @media screen and (max-width:767px) {
+    &-mob {
+      display: block;
+    }
+
+    &-pc {
+      display: none;
+    }
+  }
+}
+
+.activity {
+  color: #FFF;
+  background: url("/images/web-2-bg.webp") no-repeat center/cover;
+  padding: 100px 0;
+
+  @media screen and (max-width:1024px) {
+    padding: 40px 0;
+  }
+
+  .container {
+    position: relative;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.70);
+    padding: 80px 8%;
+    width: 80%;
+    margin: 0 auto;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 87%;
+      top: 76%;
+      z-index: 10;
+      width: 369px;
+      height: 369px;
+      background: url("/images/treasure\ box.webp") no-repeat center/cover;
+    }
+
+    @media screen and (max-width:1024px) {
+      padding: 40px 3%;
+
+      &::before {
+        display: none;
+      }
+    }
+
+
+    .section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &:nth-child(1) {
+        margin-bottom: 40px;
+      }
+
+      @media screen and (max-width:767px) {
+        &:nth-child(1) {
+          margin-bottom: 32px;
+        }
+
+        p {
+          font-size: 18px;
+        }
+      }
+
+      .section-title {
+        margin-bottom: 16px;
+
+        img {
+          width: 100%;
+        }
+
+        &.special-event {
+          max-width: 800px;
+        }
+      }
+
+      h2 {
+        color: #F19021;
+        text-align: center;
+        font-size: 48px;
+        font-weight: 700;
+        margin: 5px 0 16px;
+
+        @media screen and (max-width:1024px) {
+          font-size: 32px;
+        }
+
+        @media screen and (max-width:767px) {
+          font-size: 24px;
+        }
+      }
+
+      p {
+        line-height: 1.2;
+        text-align: center;
+      }
+
+      .luckLogoGroup {
+        margin: 50px auto 40px;
+        display: flex;
+        justify-content: space-between;
+        max-width: 1000px;
+
+        @media screen and (max-width:767px) {
+          margin: 16px auto 0px;
+        }
+
+        .luckLogo {
+          width: 30%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          img {
+            width: 100%;
+            filter: drop-shadow(0px 0px 20px rgba(255, 214, 0, 0.30));
+
+            &:hover {
+              filter: drop-shadow(0px 0px 20px rgba(255, 214, 0, 0.8));
+            }
+          }
+        }
+      }
+
+      .gamesGroup {
+        max-width: 1000px;
+        width: 100%;
+
+        &-pc {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          @media screen and (max-width:767px) {
+            display: none;
+          }
+        }
+
+        &-mob {
+          display: none;
+          position: relative;
+
+          @media screen and (max-width:767px) {
+            display: block;
+          }
+
+          .swiper-button-prev,
+          .swiper-button-next {
+            position: absolute;
+            top: 50%;
+            right: -3%;
+            width: 25px;
+            height: 33px;
+            background: url("/images/eva_arrow-up-fill.svg") no-repeat center/cover;
+
+            &:after {
+              display: none;
+            }
+          }
+
+          .swiper-button-prev {
+            transform: scaleX(-1);
+            right: auto;
+            left: -3%;
+          }
+        }
+
+        .game {
+          width: 30%;
+
+          @media screen and (max-width:767px) {
+            width: calc(100% - 50px);
+            margin: 0 auto;
+          }
+
+          &-logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+              width: 72%;
+            }
+          }
+
+          &-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+      }
+    }
+  }
+
+
+}
+
+.bonus {
+  background-color: #590802;
+  padding: 50px 0;
+
+  @media screen and (max-width:767px) {
+    padding: 40px 0 30px;
+  }
+
+  &-container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &-title {
+    &-pc {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      max-width: 1274px;
+
+      img {
+        width: 100%;
+      }
+
+      @media screen and (max-width:1024px) {
+        display: none;
+      }
+    }
+
+    &-mob {
+      display: none;
+
+      img {
+        width: 100%;
+      }
+
+      @media screen and (max-width:1024px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+
+  h2 {
+    color: #F19021;
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+    margin: 16px 0 40px;
+
+    @media screen and (max-width:1024px) {
+      font-size: 32px;
+      margin: 0px 0 32px;
+    }
+
+    @media screen and (max-width:767px) {
+      font-size: 24px;
+    }
+  }
+
+  &-games {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    @media screen and (max-width:767px) {
+      gap: 6px;
+    }
+
+    .game-box {
+      width: calc(100% / 6 - 32px);
+      min-width: 190px;
+      border-radius: 20px;
+      background: rgba(0, 0, 0, 0.80);
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @media screen and (max-width:1024px) {
+        width: calc(100% / 3 - 32px);
+        min-width: auto;
+        border-radius: 15px;
+      }
+
+      @media screen and (max-width:767px) {
+        padding: 8px;
+        width: calc(100% / 3 - 6px);
+        margin-bottom: 10px;
+      }
+
+      .game-box-logo {
+        width: 95%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .game-box-btn {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        border-radius: 15px;
+        background: #F90;
+        color: #FFF;
+        text-decoration: none;
+        text-align: center;
+        font-size: 32px;
+        line-height: 1.25;
+        font-weight: 700;
+        cursor: pointer;
+
+        @media screen and (max-width:767px) {
+          border-radius: 10px;
+          line-height: 1;
+          font-size: 18px;
+        }
+
+        &:hover {
+          background-color: rgb(255, 98, 0);
+        }
+      }
+
+    }
+  }
+}
+
+.providers {
+  background: #1C0E07;
+  padding: 50px 0;
+
+  h2 {
+    width: 100%;
+    max-width: 1274px;
+    margin: 0 auto 40px;
+    font-size: 48px;
+    color: #FFF;
+    font-weight: 700;
+    text-align: center;
+
+    @media screen and (max-width:1024px) {
+      font-size: 32px;
+    }
+
+    @media screen and (max-width:767px) {
+      font-size: 28px;
+      margin: 0 auto 16px;
+    }
+  }
+
+  &-logos {
+    width: 100%;
+    max-width: 1274px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @media screen and (max-width:1024px) {
+      padding: 0 16px;
+    }
+
+    @media screen and (max-width:767px) {
+      justify-content: center;
+      width: 85%;
+      gap: 20px;
+    }
+
+    .providers-logo {
+      width: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @media screen and (max-width:1024px) {
+        width: 150px;
+      }
+
+      @media screen and (max-width:767px) {
+        width: 100px;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+/*---dropDownBtn---*/
+.dropDownBtn-toggle {
+  z-index: 2;
+  display: inline-block;
+  background-color: #F90;
+  padding: 10px;
+  border-radius: 15px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  animation: pulseBtn 2s ease-in-out infinite;
+
+  @media screen and (max-width:1024px) {
+    font-size: 18px;
+    line-height: 1;
+    white-space: nowrap;
+  }
+}
+
+@keyframes pulseBtn {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.dropDownBtn-toggle:hover {
+  background-color: rgb(255, 98, 0);
+}
+
+.dropDownBtn {
+  position: relative;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dropDownBtn-list {
+  position: absolute;
+  z-index: 1;
+  top: 99%;
+  width: 78%;
+  background-color: rgba(0, 0, 0, 0.5);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+
+  @media screen and (max-width:767px) {
+    position: relative;
+  }
+}
+
+.dropDownBtn.show .dropDownBtn-list {
+  max-height: fit-content;
+}
+
+.dropDownBtn-link {
+  display: block;
+  padding: 8px 10px;
+  line-height: 30px;
+  font-size: 24px;
+  font-weight: 700;
+  border-bottom: 1px solid #FFF;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+
+  @media screen and (max-width:1024px) {
+    font-size: 18px;
+  }
+
+  @media screen and (max-width:767px) {
+    line-height: 1;
+  }
+}
+
+.dropDownBtn-link:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
