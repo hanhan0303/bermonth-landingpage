@@ -10,20 +10,6 @@ window.addEventListener('load', function () {
     },
   });
 
-  const toggleBtns = document.querySelectorAll('.dropDownBtn');
-
-  toggleBtns.forEach((item) => {
-    item.addEventListener('click', (e) => {
-      // remove item sibling class
-      toggleBtns.forEach((sibling) => {
-        if (sibling !== item) {
-          sibling.classList.remove('show');
-        }
-      });
-      item.classList.toggle('show');
-    });
-  });
-
   const games = [
     {
       gamesId: 'HAWKPLAY',

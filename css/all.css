@@ -338,6 +338,13 @@ main {
 }
 .activity .container .section .gamesGroup .game {
   width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 @media screen and (max-width: 767px) {
   .activity .container .section .gamesGroup .game {
@@ -360,15 +367,54 @@ main {
   width: 72%;
 }
 .activity .container .section .gamesGroup .game-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  background-color: #F90;
+  padding: 10px;
+  border-radius: 15px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-animation: pulseBtn 2s ease-in-out infinite;
+          animation: pulseBtn 2s ease-in-out infinite;
+}
+.activity .container .section .gamesGroup .game-btn:hover {
+  background-color: rgb(255, 98, 0);
+}
+@media screen and (max-width: 1024px) {
+  .activity .container .section .gamesGroup .game-btn {
+    font-size: 18px;
+    line-height: 1;
+    white-space: nowrap;
+  }
+}
+@-webkit-keyframes pulseBtn {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes pulseBtn {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .bonus {
@@ -621,125 +667,4 @@ main {
 }
 .providers-logos .providers-logo img {
   width: 100%;
-}
-
-/*---dropDownBtn---*/
-.dropDownBtn-toggle {
-  z-index: 2;
-  display: inline-block;
-  background-color: #F90;
-  padding: 10px;
-  border-radius: 15px;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 30px;
-  color: #fff;
-  text-align: center;
-  cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  -webkit-animation: pulseBtn 2s ease-in-out infinite;
-          animation: pulseBtn 2s ease-in-out infinite;
-}
-@media screen and (max-width: 1024px) {
-  .dropDownBtn-toggle {
-    font-size: 18px;
-    line-height: 1;
-    white-space: nowrap;
-  }
-}
-
-@-webkit-keyframes pulseBtn {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes pulseBtn {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-.dropDownBtn-toggle:hover {
-  background-color: rgb(255, 98, 0);
-}
-
-.dropDownBtn {
-  position: relative;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.dropDownBtn-list {
-  position: absolute;
-  z-index: 1;
-  top: 99%;
-  width: 78%;
-  background-color: rgba(0, 0, 0, 0.5);
-  max-height: 0;
-  overflow: hidden;
-  -webkit-transition: max-height 0.3s ease-out;
-  transition: max-height 0.3s ease-out;
-}
-@media screen and (max-width: 767px) {
-  .dropDownBtn-list {
-    position: relative;
-  }
-}
-
-.dropDownBtn.show .dropDownBtn-list {
-  max-height: -webkit-fit-content;
-  max-height: -moz-fit-content;
-  max-height: fit-content;
-}
-
-.dropDownBtn-link {
-  display: block;
-  padding: 8px 10px;
-  line-height: 30px;
-  font-size: 24px;
-  font-weight: 700;
-  border-bottom: 1px solid #FFF;
-  text-align: center;
-  text-decoration: none;
-  color: white;
-}
-@media screen and (max-width: 1024px) {
-  .dropDownBtn-link {
-    font-size: 18px;
-  }
-}
-@media screen and (max-width: 767px) {
-  .dropDownBtn-link {
-    line-height: 1;
-  }
-}
-
-.dropDownBtn-link:hover {
-  background-color: rgba(0, 0, 0, 0.8);
 }

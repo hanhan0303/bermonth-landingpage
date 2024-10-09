@@ -326,6 +326,8 @@ main {
 
         .game {
           width: 30%;
+          display: flex;
+          flex-direction: column;
 
           @media screen and (max-width:767px) {
             width: calc(100% - 50px);
@@ -343,9 +345,42 @@ main {
           }
 
           &-btn {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            background-color: #F90;
+            padding: 10px;
+            border-radius: 15px;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 30px;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            user-select: none;
+            animation: pulseBtn 2s ease-in-out infinite;
+
+            &:hover {
+              background-color: rgb(255, 98, 0);
+            }
+
+            @media screen and (max-width:1024px) {
+              font-size: 18px;
+              line-height: 1;
+              white-space: nowrap;
+            }
+          }
+
+          @keyframes pulseBtn {
+            0% {
+              opacity: 1;
+            }
+
+            50% {
+              opacity: 0.5;
+            }
+
+            100% {
+              opacity: 1;
+            }
           }
         }
       }
@@ -555,96 +590,4 @@ main {
       }
     }
   }
-}
-
-/*---dropDownBtn---*/
-.dropDownBtn-toggle {
-  z-index: 2;
-  display: inline-block;
-  background-color: #F90;
-  padding: 10px;
-  border-radius: 15px;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 30px;
-  color: #fff;
-  text-align: center;
-  cursor: pointer;
-  user-select: none;
-  animation: pulseBtn 2s ease-in-out infinite;
-
-  @media screen and (max-width:1024px) {
-    font-size: 18px;
-    line-height: 1;
-    white-space: nowrap;
-  }
-}
-
-@keyframes pulseBtn {
-  0% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0.5;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-.dropDownBtn-toggle:hover {
-  background-color: rgb(255, 98, 0);
-}
-
-.dropDownBtn {
-  position: relative;
-  width: fit-content;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.dropDownBtn-list {
-  position: absolute;
-  z-index: 1;
-  top: 99%;
-  width: 78%;
-  background-color: rgba(0, 0, 0, 0.5);
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease-out;
-
-  @media screen and (max-width:767px) {
-    position: relative;
-  }
-}
-
-.dropDownBtn.show .dropDownBtn-list {
-  max-height: fit-content;
-}
-
-.dropDownBtn-link {
-  display: block;
-  padding: 8px 10px;
-  line-height: 30px;
-  font-size: 24px;
-  font-weight: 700;
-  border-bottom: 1px solid #FFF;
-  text-align: center;
-  text-decoration: none;
-  color: white;
-
-  @media screen and (max-width:1024px) {
-    font-size: 18px;
-  }
-
-  @media screen and (max-width:767px) {
-    line-height: 1;
-  }
-}
-
-.dropDownBtn-link:hover {
-  background-color: rgba(0, 0, 0, 0.8);
 }
